@@ -185,14 +185,41 @@ namespace GADE_POE
         {
             this.X = eX;
             this.Y = eY;
+            this.Damage = 1;
+            this.HP = 10;
 
         }
-            
 
+        public override MovementEnum ReturnMove()
+        {
+            //???????????????
+        }
 
 
 
     }
-   
+   class Hero : Character
+    {
+        public Hero(int X, int Y, int HP)
+        {
+            this.X = getX;
+            this.Y = getY;
+            this.Damage = 2;
+            this.MaxHP = getMaxHP;
+        }
+
+        public override MovementEnum ReturnMove()
+        {
+            //?????????????????????
+        }
+
+        public override string ToString()
+        {
+            return "PLayer Stats /n" + "HP: " + this.HP + "/" + this.MaxHP + "/n" + "Damage: 2 /n" + "[" + this.X + ", " + this.Y + "]";
+        }
+
+    }
+
+
 }
 
