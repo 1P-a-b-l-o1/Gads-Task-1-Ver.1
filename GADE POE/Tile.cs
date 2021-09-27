@@ -76,9 +76,12 @@ namespace GADE_POE
 
         public enum MovementEnum { noMovement, UP, DOWN, LEFT, RIGHT };
 
-        protected Character(int X, int Y, Char Symbol) : base(X, Y, Symbol)
+        public Character(int X, int Y, Char Symbol) : base(X, Y, Symbol)
         {
-           
+            this.X = X;
+            this.Y = Y;
+            this.symbol = Symbol;
+          
         }
 
         public virtual void Attack(Character Target)
@@ -167,6 +170,7 @@ namespace GADE_POE
         {
             this.HP = health;
             this.Damage = damage; 
+
         }
         public override string ToString()
         {
@@ -202,10 +206,10 @@ namespace GADE_POE
     {
         public Hero(int X, int Y, int HP)
         {
-            this.X = getX;
-            this.Y = getY;
+            this.X = X;
+            this.Y = Y;
             this.Damage = 2;
-            this.MaxHP = getMaxHP;
+            this.MaxHP = HP;
         }
 
         public override MovementEnum ReturnMove()
@@ -218,8 +222,104 @@ namespace GADE_POE
             return "PLayer Stats /n" + "HP: " + this.HP + "/" + this.MaxHP + "/n" + "Damage: 2 /n" + "[" + this.X + ", " + this.Y + "]";
         }
 
-    }
+   }
+    
 
+    class Map
+    {
+
+        Char[,] tilemap;
+        public int width;
+        public int height;
+        public int hX;
+        public int hY;
+        int[] Enemy;
+        int ran;
+        Character Hero = new Character(Character.getX, Character.getY, 'H');
+        public Map(int minHeight, int minWidth, int maxHeight, int maxWidth, int numEnemies)
+        {
+
+            
+            Random ran = new Random();
+            this.height = ran.Next(minHeight, maxHeight);
+            this.width = ran.Next(minWidth, maxWidth);
+           
+            char[,] tilemap = new char[height, width];
+            int[] Enemy = new int[numEnemies];
+            for (int i = 0; i < this.width; i++)
+            {
+                for (int j = 0; j < this.height; j++)//creates the map
+                {
+                    if (i == 0 && j == this.width)
+                    {
+                        tilemap[i, j] = 'X';
+                    }
+                    if (j == 0 && j == this.height)
+                    {
+                        tilemap[i, j] = 'X';
+                    }
+
+
+
+
+                }
+            }
+            Create();//Creates the hero and
+            UpdateVision((hX -1), (hX +1) ,(hY-1), (hX+1));//updates the vision at positions around the hero
+
+
+            
+        }
+        
+        public void Create()
+        {
+            for (int i = 0; i < this.width; i++)
+            {
+                for (int j = 0; j < this.height; j++)
+                {
+                    if (Hero.getX == i && Hero.getY == j)
+                    {
+                        tilemap[i, j] = 'H';//sets hero on map
+                    }
+                }
+            }
+            
+
+        }
+
+        public Tile Create(Tile.TileType Type)
+        {
+            switch (Type)
+            {
+                case Tile.TileType.Hero:
+                    return new Hero(Hero.getX, Hero.getY, 'H');
+                case Tile.TileType.Enemy:
+                    return new Enemy(Enemy.getX, Enemy.getY, 'H');
+                    break;
+                case Tile.TileType.Gold:
+                    return new Gold(Gold.getX, Gold.getY, 'H');
+                    break;
+                case Tile.TileType.Weapon:
+                    return new Weapon(Weapon.getX, Weapon.getY, 'H');
+                    break;
+
+
+
+
+
+
+
+
+            }
+            return null;
+        }
+
+    
+    
+        
+    
+    }
+    
 
 }
 

@@ -1,0 +1,6 @@
+C:\Users\Richard Landman\Google Drive\Work\GADE\Sem 2\Task 1\Gade-Task-1\GADE POE\obj\Debug\netcoreapp3.1\GADE POE.csprojAssemblyReference.cache
+C:\Users\Richard Landman\Google Drive\Work\GADE\Sem 2\Task 1\Gade-Task-1\GADE POE\obj\Debug\netcoreapp3.1\GADE_POE.Form1.resources
+C:\Users\Richard Landman\Google Drive\Work\GADE\Sem 2\Task 1\Gade-Task-1\GADE POE\obj\Debug\netcoreapp3.1\GADE POE.csproj.GenerateResource.cache
+C:\Users\Richard Landman\Google Drive\Work\GADE\Sem 2\Task 1\Gade-Task-1\GADE POE\obj\Debug\netcoreapp3.1\GADE POE.AssemblyInfoInputs.cache
+C:\Users\Richard Landman\Google Drive\Work\GADE\Sem 2\Task 1\Gade-Task-1\GADE POE\obj\Debug\netcoreapp3.1\GADE POE.AssemblyInfo.cs
+C:\Users\Richard Landman\Google Drive\Work\GADE\Sem 2\Task 1\Gade-Task-1\GADE POE\obj\Debug\netcoreapp3.1\GADE POE.csproj.CoreCompileInputs.cache

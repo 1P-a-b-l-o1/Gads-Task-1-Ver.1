@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Richard Landman\\Google Drive\\Work\\GADE\\Sem 2\\Task 1\\GADE POE\\GADE POE\\GADE POE.csproj",
+      "projectUniqueName": "C:\\Users\\Richard Landman\\Google Drive\\Work\\GADE\\Sem 2\\Task 1\\Gade-Task-1\\GADE POE\\GADE POE.csproj",
       "projectName": "GADE POE",
-      "projectPath": "C:\\Users\\Richard Landman\\Google Drive\\Work\\GADE\\Sem 2\\Task 1\\GADE POE\\GADE POE\\GADE POE.csproj",
+      "projectPath": "C:\\Users\\Richard Landman\\Google Drive\\Work\\GADE\\Sem 2\\Task 1\\Gade-Task-1\\GADE POE\\GADE POE.csproj",
       "packagesPath": "C:\\Users\\Richard Landman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Richard Landman\\Google Drive\\Work\\GADE\\Sem 2\\Task 1\\GADE POE\\GADE POE\\obj\\",
+      "outputPath": "C:\\Users\\Richard Landman\\Google Drive\\Work\\GADE\\Sem 2\\Task 1\\Gade-Task-1\\GADE POE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
